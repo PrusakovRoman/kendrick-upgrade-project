@@ -1,0 +1,141 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body, * {
+  font-family: JetBrains Mono, monospace;
+}
+
+.header .header__menu a:hover > .link-to-store__arrow {
+  transform: scale(1.5) rotate(90deg);
+  top: 23%;
+  opacity: 0.72;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.75rem 1.75rem 0 1.75rem;
+}
+.header .header__menu a {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  display: inline-block;
+}
+.header .header__menu a:hover {
+  color: #cd3f25;
+}
+.header .header__menu a:hover + .link-to-store__stores {
+  display: block;
+}
+.header .link-to-store__arrow {
+  left: 103%;
+  transform: scale(1.2) rotate(0);
+}
+.header .link-to-store__stores {
+  display: none;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  top: 100%;
+  left: -0.25rem;
+  white-space: nowrap;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: 30;
+}
+.header .link-to-store__stores:hover {
+  display: block;
+}
+
+.main__folder {
+  position: absolute;
+  width: 65px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.main__folder img {
+  image-rendering: pixelated;
+}
+
+.main__folder--black {
+  top: 14%;
+  left: 53%;
+  z-index: -1;
+}
+
+.main__folder--gray {
+  top: 42%;
+  left: 18%;
+}
+
+.main__family-photo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main__family-photo img {
+  image-rendering: pixelated;
+}
+
+.main__photo-modal {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.main__photo-modal img {
+  max-width: 81%;
+  image-rendering: pixelated;
+}
+
+.main__folder--default {
+  top: 65%;
+  left: 62%;
+}
+.main__folder--default span {
+  color: #000;
+  font-size: 0.8125rem;
+  line-height: 1.1rem;
+  white-space: nowrap;
+  margin-left: -11px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 2rem;
+}
+.footer li, .footer a {
+  font-size: 0.8125rem;
+  line-height: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  display: inline-block;
+}
+.footer a:hover {
+  color: #cd3f25;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,131 @@
+//---------------------
+//Потом подключи библиотеку
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+
+//--------------------
+
+//sass --watch main.scss:style.css
+
+
+body, * {
+  font-family: JetBrains Mono, monospace;
+}
+
+$font-size-sm: .8125rem;
+$color-link-base: rgba(0, 0, 0, .5);
+$color-link-onhover: #cd3f25;
+$line-height: 1.1rem;
+
+%transformated-link-arrow {
+  transform: scale(1.5) rotate(90deg);
+  top: 23%;
+  opacity: .72;
+}
+
+@mixin main-page-link() {
+  font-size: $font-size-sm;
+  line-height: $line-height;
+  color: $color-link-base;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.75rem 1.75rem 0 1.75rem;
+    .header__menu a {
+      padding: .25rem 0.5rem;
+      @include main-page-link();
+        &:hover {
+          color: $color-link-onhover;
+        }
+        &:hover > .link-to-store__arrow {
+          @extend %transformated-link-arrow;
+        }
+        &:hover + .link-to-store__stores {
+          display: block;
+        }
+    }
+    .link-to-store__arrow {
+      left: 103%;
+      transform: scale(1.2) rotate(0);
+    }
+    // .transformated {
+    //   @extend %transformated-link-arrow;
+    // }
+    .link-to-store__stores {
+      display: none;
+      background-color: rgba(255, 255, 255, 1);
+      border: 2px solid rgba(0, 0, 0, 1);
+      top: 100%;
+      left: -0.25rem;
+      white-space: nowrap;
+      box-shadow: 4px 4px 0 rgba(0,0,0,.25);
+      z-index: 30;
+        &:hover {
+          display: block;
+        }
+    }
+}
+.main__folder {
+  position: absolute;
+  width: 65px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  img {
+    image-rendering: pixelated;
+  }
+}
+.main__folder--black {
+  top: 14%;
+  left: 53%;
+  z-index: -1;
+}
+.main__folder--gray {
+  top: 42%;
+  left: 18%;
+}
+.main__family-photo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    img {
+      image-rendering: pixelated;
+    }
+}
+.main__photo-modal {
+  height: 100vh;
+  overflow-y: hidden;
+    img {
+      max-width: 81%;
+      image-rendering: pixelated;
+  }
+}
+.main__folder--default {
+  top: 65%;
+  left: 62%;
+    span {
+      color: #000;
+      font-size: $font-size-sm;
+      line-height: $line-height;
+      white-space: nowrap;
+      margin-left: -11px;
+    }
+}
+.footer {
+  position: fixed;
+  bottom: 2rem;
+    li, a {
+      @include main-page-link();
+    }
+    a:hover {
+      color: $color-link-onhover;
+    }
+}

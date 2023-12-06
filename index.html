@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <header class="header w-100">
+      <div class="header__wrapper">
+        <ul class="header__menu d-flex justify-content-between">
+          <li><a href="#">music</a></li>
+          <li class="link-to-store position-relative">
+            <a href="#" class="position-relative">store <span class="link-to-store__arrow d-inline-block position-absolute">→</span></a>
+            <div class="link-to-store__stores py-1 position-absolute">
+              <ul class="link-to-store__menu">
+                <li><a href="#">music store</a></li>
+                <li><a href="#">eu/uk store</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">tour</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main">
+      <a href="" class="main__folder main__folder--black">
+        <img src="img/blackFolder.png" alt="">
+      </a>
+      <a href="" class="main__folder main__folder--gray">
+        <img src="img/grayFolder.png" alt="">
+      </a>
+
+      <!-- modal -->
+      <button type="button" class="btn main__family-photo position-absolute" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <img src="img/familyPhoto.webp" alt="" width="84" height="84">
+      </button>
+      
+      <div class="modal main__photo-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center align-items-center">
+          <img src="img/familyPhoto.webp" alt="">
+        </div>
+      </div>
+      <!--  -->
+
+      <a href="" class="main__folder main__folder--default">
+        <img src="img/defaultFolder.png" alt="">
+        <span class="text-center d-inline-block">nu thoughts</span>
+      </a>
+    </main>
+
+    <footer class="footer w-100">
+      <div class="footer__wrapper d-flex justify-content-center">
+        <ul class="footer__menu d-flex column-gap-2">
+          <li><a href="https://twitter.com/kendricklamar">twitter</a></li>
+          <li>/</li>
+          <li><a href="https://www.instagram.com/kendricklamar/">instagram</a></li>
+          <li>/</li>
+          <li><a href="https://www.facebook.com/kendricklamar">facebook</a></li>
+          <li>/</li>
+          <li><a href="https://www.youtube.com/channel/UC3lBXcrKFnFAFkfVk5WuKcQ/videos">youtube</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script>
+    const linkArrow = document.querySelector('.link-to-store__arrow');
+    const linkBlock = document.querySelector('.link-to-store__stores');
+    linkBlock.onmouseover = function() {
+      // linkArrow.classList.add('transformated');
+      // linkArrow.style.textCss = 'transform: scale(1.5) rotate(90deg); top: 23%; opacity: .72;';
+    }
+    linkBlock.onmouseout = function() {
+      // linkArrow.classList.remove('transformated');
+      // linkArrow.style.textCss = '';
+
+    }
+  </script>
+</body>
+</html>
