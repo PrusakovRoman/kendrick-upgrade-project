@@ -27,12 +27,6 @@ body, * {
   font-family: JetBrains Mono, monospace;
 }
 
-.header .header__menu a:hover > .link-to-store__arrow {
-  transform: scale(1.5) rotate(90deg);
-  top: 23%;
-  opacity: 0.72;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -50,12 +44,22 @@ body, * {
 .header .header__menu a:hover {
   color: #cd3f25;
 }
+.header .header__menu a:hover > .link-to-store__arrow {
+  transform: scale(1.5) rotate(90deg);
+  top: 23%;
+  opacity: 0.72;
+}
 .header .header__menu a:hover + .link-to-store__stores {
   display: block;
 }
 .header .link-to-store__arrow {
   left: 103%;
   transform: scale(1.2) rotate(0);
+}
+.header .transformated {
+  transform: scale(1.5) rotate(90deg);
+  top: 23%;
+  opacity: 0.72;
 }
 .header .link-to-store__stores {
   display: none;
@@ -71,51 +75,51 @@ body, * {
   display: block;
 }
 
-.main__folder {
+.main--index__folder {
   position: absolute;
   width: 65px;
   display: flex;
   flex-direction: column;
   text-decoration: none;
 }
-.main__folder img {
+.main--index__folder img {
   image-rendering: pixelated;
 }
 
-.main__folder--black {
+.main--index__folder--black {
   top: 14%;
   left: 53%;
   z-index: -1;
 }
 
-.main__folder--gray {
+.main--index__folder--gray {
   top: 42%;
   left: 18%;
 }
 
-.main__family-photo {
+.main--index__family-photo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.main__family-photo img {
+.main--index__family-photo img {
   image-rendering: pixelated;
 }
 
-.main__photo-modal {
+.main--index__photo-modal {
   height: 100vh;
   overflow-y: hidden;
 }
-.main__photo-modal img {
+.main--index__photo-modal img {
   max-width: 81%;
   image-rendering: pixelated;
 }
 
-.main__folder--default {
+.main--index__folder--default {
   top: 65%;
   left: 62%;
 }
-.main__folder--default span {
+.main--index__folder--default span {
   color: #000;
   font-size: 0.8125rem;
   line-height: 1.1rem;
@@ -125,7 +129,9 @@ body, * {
 
 .footer {
   position: fixed;
-  bottom: 2rem;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 2rem;
 }
 .footer li, .footer a {
   font-size: 0.8125rem;

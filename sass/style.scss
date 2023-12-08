@@ -10,7 +10,6 @@ ol,ul{list-style:none}
 
 //sass --watch main.scss:style.css
 
-
 body, * {
   font-family: JetBrains Mono, monospace;
 }
@@ -19,12 +18,6 @@ $font-size-sm: .8125rem;
 $color-link-base: rgba(0, 0, 0, .5);
 $color-link-onhover: #cd3f25;
 $line-height: 1.1rem;
-
-%transformated-link-arrow {
-  transform: scale(1.5) rotate(90deg);
-  top: 23%;
-  opacity: .72;
-}
 
 @mixin main-page-link() {
   font-size: $font-size-sm;
@@ -46,7 +39,9 @@ $line-height: 1.1rem;
           color: $color-link-onhover;
         }
         &:hover > .link-to-store__arrow {
-          @extend %transformated-link-arrow;
+          transform: scale(1.5) rotate(90deg);
+          top: 23%;
+          opacity: .72;
         }
         &:hover + .link-to-store__stores {
           display: block;
@@ -56,9 +51,11 @@ $line-height: 1.1rem;
       left: 103%;
       transform: scale(1.2) rotate(0);
     }
-    // .transformated {
-    //   @extend %transformated-link-arrow;
-    // }
+    .transformated {
+      transform: scale(1.5) rotate(90deg);
+      top: 23%;
+      opacity: .72;
+    }
     .link-to-store__stores {
       display: none;
       background-color: rgba(255, 255, 255, 1);
@@ -73,7 +70,7 @@ $line-height: 1.1rem;
         }
     }
 }
-.main__folder {
+.main--index__folder {
   position: absolute;
   width: 65px;
   display: flex;
@@ -83,16 +80,16 @@ $line-height: 1.1rem;
     image-rendering: pixelated;
   }
 }
-.main__folder--black {
+.main--index__folder--black {
   top: 14%;
   left: 53%;
   z-index: -1;
 }
-.main__folder--gray {
+.main--index__folder--gray {
   top: 42%;
   left: 18%;
 }
-.main__family-photo {
+.main--index__family-photo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -100,7 +97,7 @@ $line-height: 1.1rem;
       image-rendering: pixelated;
     }
 }
-.main__photo-modal {
+.main--index__photo-modal {
   height: 100vh;
   overflow-y: hidden;
     img {
@@ -108,7 +105,7 @@ $line-height: 1.1rem;
       image-rendering: pixelated;
   }
 }
-.main__folder--default {
+.main--index__folder--default {
   top: 65%;
   left: 62%;
     span {
@@ -121,7 +118,9 @@ $line-height: 1.1rem;
 }
 .footer {
   position: fixed;
-  bottom: 2rem;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 2rem;
     li, a {
       @include main-page-link();
     }
